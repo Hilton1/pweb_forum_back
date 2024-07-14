@@ -28,7 +28,7 @@ routes.delete('/perguntas/:id', PerguntasController.delete);
 // Rotas para respostas
 routes.get('/respostas', RespostasController.index);
 routes.get('/respostas/:id', RespostasController.show);
-routes.post('/respostas', RespostasController.store);
+routes.post('/perguntas/:perguntaId/respostas', RespostasController.store);
 routes.put('/respostas/:id', RespostasController.update);
 routes.delete('/respostas/:id', RespostasController.delete);
 

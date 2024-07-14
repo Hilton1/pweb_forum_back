@@ -20,7 +20,8 @@ class RespostasController {
   }
 
   async store(req, res) {
-    const { conteudo, perguntaId, userId } = req.body;
+    const { perguntaId } = req.params;
+    const { conteudo, userId } = req.body;
 
     if (!conteudo || !perguntaId || !userId) {
       return res.status(400).json({ error: 'All fields are required' });
